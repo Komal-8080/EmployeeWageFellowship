@@ -1,27 +1,28 @@
-
-//package employeeWageFellowship;
+package employeeWageFellowship;
 
 
 public class EmployeeWage {
 	
-	//UC1: To check employee is present 
+	//main Method 
 	public static void main(String args[]) {
 		System.out.println("Welcome to Employee Wage Computation");
 		Computation();
 	}
 	
-	//UC2: Calculating Employee Wage
+	//Computation
 	public static void Computation() {	
-			int Part_Time = 0;
-			int Full_Time = 1;
+			int Part_Time = 1;
+			int Full_Time = 2;
 			int Employee_Rate_Per_Hour = 20;
 			int Emp_Hours = 0;
 			int Emp_Wage = 0;
 			
 			int Emp_Check = (int) Math.floor(Math.random() * 10) % 2;
 				if (Emp_Check == Full_Time) {
-					System.out.println("Employee is Present");
 					Emp_Hours = 8;
+				}
+				else if (Emp_Check == Part_Time) {
+					Emp_Hours = 4;					
 				}
 				else { 
 					System.out.println("Employee is Absent");
