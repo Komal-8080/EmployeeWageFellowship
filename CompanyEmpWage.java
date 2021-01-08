@@ -1,5 +1,11 @@
 package employeeWageFellowship;
 
+interface ComputeEmpWage {
+	public void addCompanyEmpWage(String company,int Employee_Rate_Per_Hour,int Number_Of_Working_Days,int Maximum_Hours_In_Month);
+	public void empComputation( );
+	public int getTotalWage(String company);
+}
+
 public class CompanyEmpWage {
 
 	public final String company;
@@ -13,6 +19,7 @@ public class CompanyEmpWage {
 		this.Employee_Rate_Per_Hour = Employee_Rate_Per_Hour;
 		this.Number_Of_Working_Days = Number_Of_Working_Days;
 		this.Maximum_Hours_In_Month = Maximum_Hours_In_Month;
+		totalWagePerMonth = 0;
 	}
 	
 	public void setTotalWagePerMonth(int totalWagePerMonth) {
